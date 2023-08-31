@@ -20,8 +20,8 @@
     --small-font-size: 0.9rem;
     --smaller-font-size: 0.7rem;
     --name-font-size: 1rem;
-    --menu-icon-size: 1rem;
-    --menu-font-size: 0.7rem;
+    --menu-icon-size: 1.3rem;
+    --menu-font-size: 0.8rem;
 }
 .container {
     padding: 0.8rem 1.5rem;
@@ -144,11 +144,12 @@
     position: fixed;
     top: 70px;
     right: -200px;
+
     border-radius: 10px;
-    transition: all 0.3s;
+    transition: all 0.5s;
 }
 .show-menu {
-    right: 10px;
+    right: 20px;
 }
 ul > li > a {
     text-decoration: none;
@@ -197,6 +198,8 @@ ul {
         --icon-size: 1.2rem;
         --small-font-size: 0.8rem;
         --smaller-font-size: 0.5rem;
+        --menu-icon-size: 1.2rem;
+        --menu-font-size: 0.7rem;
     }
     .container {
         padding: 0.6rem 1rem;
@@ -207,9 +210,11 @@ ul {
 @media screen and (max-width: 480px) {
     /* Apply styles suitable for smaller screens */
     :root {
-        --icon-size: 1.1rem;
+        --icon-size: 1.3rem;
         --small-font-size: 0.8rem;
         --smaller-font-size: 0.5rem;
+        --menu-icon-size: 1.3rem;
+        --menu-font-size: 0.6rem;
     }
     .container {
         padding: 0.6rem 1rem;
@@ -224,7 +229,14 @@ ul {
         gap: 0;
     }
     .search__bar {
-        display: none;
+        position: fixed;
+        z-index: -2;
+        top: -50px;
+        width: 90%;
+        transition: all 0.5s;
+    }
+    .show-search {
+        top: 70px;
     }
     .right__side {
         grid-template-columns: auto auto auto auto auto auto;
@@ -242,6 +254,8 @@ ul {
         --small-font-size: 0.8rem;
         --smaller-font-size: 0.6rem;
         --name-font-size: 0.9rem;
+        --menu-icon-size: 1rem;
+        --menu-font-size: 0.7rem;
     }
     .logo {
         width: 35px;
